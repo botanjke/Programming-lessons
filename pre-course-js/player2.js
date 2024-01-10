@@ -29,26 +29,27 @@ const playlist = {
   function renderPlaylist(playlistForRendering) {    
      renderPlayListHeader(playlistForRendering);
 
-     renderTrack(playlistForRendering.tracks[0]);
-     renderTrack(playlistForRendering.tracks[1])
+   rendertrack(playlistForRendering.tracks[0]);
+   rendertrack(playlistForRendering.tracks[1]);
   };
-  function renderPlayListHeader(playlistForRendering){
-    let playlistTitleElement = document.createElement('div')
-    playlistTitleElement.append(playlistForRendering.title);
-    document.body.append(playlistTitleElement);
+  function renderPlayListHeader(playlistForRendering) {
+    let playlistTitleElement = document.createElement('h2');
+playlistTitleElement.append(playlistForRendering.title)
+document.body.append(playlistTitleElement)
 
     let playlistImageElement = document.createElement('img')
     playlistImageElement.src = playlistForRendering.coverImageUrl;
     document.body.append(playlistImageElement);
   }
-  function renderTrack(inputTrackForRendering){
-    let trackElement = document.createElement ('div')
-    trackElement.append(inputTrackForRendering.artistName + ' - ' + inputTrackForRendering.title)
-    document.body.append(trackElement);
+  function rendertrack (inputTrackForRendering){
+    let trackElement = document.createElement('div');
+    trackElement.append(inputTrackForRendering.artistName + ' - ' +inputTrackForRendering.title)
+    document.body.append(trackElement)
+
     let playerElement = document.createElement('audio');
     playerElement.src = inputTrackForRendering.fileUrl;
-    playerElement.controls = true
-trackElement.append(playerElement)
-document.body.append(trackElement)    
+    playerElement.controls = true;
+    trackElement.append(playerElement);
+    document.body.append(trackElement)
+
   }
-  
