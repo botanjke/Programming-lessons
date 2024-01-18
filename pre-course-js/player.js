@@ -59,9 +59,10 @@ playlistImageElement.src = playlistForRendering.coverImageUrl;
 document.body.append(playlistImageElement);
 }
 function renderTrack(inputTrackForRendering){
-    let track1Element = document.createElement('div');
-track1Element.append(inputTrackForRendering.artistName + ' - ' + inputTrackForRendering.title);
-document.body.append(track1Element);
+const track1Element = document.createElement('div')
+    let trackTitleElement = document.createElement('div');
+    trackTitleElement.append(inputTrackForRendering.artistName + ' - ' + inputTrackForRendering.title);
+document.body.append(trackTitleElement);
 let playerElement = document.createElement('audio');
 playerElement.src = inputTrackForRendering.fileUrl;
 playerElement.controls = true;
