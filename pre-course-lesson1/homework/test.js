@@ -1,8 +1,7 @@
-let name = "Joshua Harris"
-function abbrevName(name){
-    let array = name.split(' ')
-    return (array [0][0] + '.' + array [1][0]).toUpperCase()
-    console.log(name)
+let myDream = 'Хочу стать frontend разработчиком'
+
+let allSymbols = myDream.split('')
     
-    }
-    console.log(abbrevName)
+for (let n = 0; n < allSymbols.length; n++) {
+    console.log(allSymbols[n])
+}        
